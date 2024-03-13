@@ -1,0 +1,106 @@
+@import url("reset.css");
+
+#yavoriv_pie {
+	color: yellowgreen; 
+}
+/* Пиріг з Галичини */
+
+#test {
+	color: cyan; 
+}
+/* Тестовий блок */
+
+.item__yellow {
+	color: #d5c31e; 
+}
+/* Борщ, Янтик, Сметанник */
+
+.sub-title {
+	color: orangered; 
+}
+/* підзаголовки h3 */
+
+[class*="label"] {
+	color: red; 
+}
+/* Наші соціальні мережі */
+
+li {
+	color: #1889bd;
+}
+/* Грецький, Гречаники, Яворівський */
+
+h1 {
+color: #210cd6;
+}
+/* З Україною в серці — страви з різних регіонів країни */
+
+h2 {
+	color: #000;
+}
+/* Від Приазов’я до Буковини ... */
+
+* {
+	color: #000000a5;
+}
+/* текст в "p" */
+
+div.footer__title {
+	color: violet;
+}
+/* Посилання на оригінал */
+
+.header__title.title {
+	color: #2e1d74;
+}
+/* Зміст */
+
+/*
+.title,
+.text,
+li {
+	color: lightgreen;
+}
+*/
+
+p a {
+	color: lightgreen;
+}
+/* Усі теги A в середені тега P
+греків Приазов’я, борщ, Слобожанщині */
+
+.socials__item a {
+	color: maroon;
+}
+/* Усі теги A в середені об'єктів з класом socials__item
+Instagram, Facebook, Youtube */
+
+div .lightgrey-text {
+	color: lightgrey;
+}
+/* Усі об'єкти з класом lightgrey-text в середені div
+Потіште себе ... */
+
+.gold-text * {
+	color: gold;
+}
+/* Усі об'єкти в середені об'єктів з класом gold-text */
+
+.rosybrown-text > p {
+	color: rosybrown;
+}
+/* Усі теги P першого рівня в середені об'єктів з класом rosybrown-text */
+
+.test-text ~ p {
+	color: mediumturquoise;
+}
+/* Усі теги P які знаходяться 
+далі по коду після об'єктів з класом test-text
+та мають той самий рівень вкладеності */
+
+.test-text + p {
+	color: darkolivegreen;
+}
+/* Теги P які знаходяться беспосередньо 
+далі по коду після об'єктів з класом test-text
+та мають той самий рівень вкладеності */
