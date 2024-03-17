@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Proxima Nova';
+	src: 
+		url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+		url('../ProximaNova-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: 
+		url('../ProximaNova-Regular.woff2') format('woff2'),
+		url('../ProximaNova-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Migha';
+	src: 
+		url('../Migha-Regular.woff2') format('woff2'),
+		url('../Migha-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Migha';
+	src: 
+		url('../Migha-Bold.woff2') format('woff2'),
+		url('../Migha-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Migha';
+	src: 
+		url('../Migha-Light.woff2') format('woff2'),
+		url('../Migha-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Migha';
+	src: 
+		url('../Migha-Medium.woff2') format('woff2'),
+		url('../Migha-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
