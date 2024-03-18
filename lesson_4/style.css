@@ -1,0 +1,144 @@
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700&display=swap");
+
+/* Підключення з сайту https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Truculenta:opsz,wght@12..72,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* ======================================================================================================================================================== */
+.header {
+}
+.header__block {
+	font-size: 18px;
+	line-height: 1.5;
+}
+.header__link {
+	color: #1889bd;
+	text-align: right;
+	word-spacing: 2px;
+}
+.header__link a {
+	text-decoration: underline;
+}
+.header__title {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.8;
+	letter-spacing: 3px;
+	white-space: nowrap;
+	color: blue;
+	text-shadow: 5px 5px 5px yellow;
+}
+.header__text {
+	font-family: "Josefin Slab";
+	word-spacing: 4px;
+}
+/* ========================== */
+.page {
+	font-size: 20px;
+}
+.page__title {
+	font-family: "Truculenta";
+	font-style: italic;
+	font-weight: 600;
+	text-align: center;
+	line-height: 2;
+	color: #2d7d0ec1;
+}
+.page__block {
+	text-align: justify;
+	line-height: 1.5;
+}
+.page__block h3 {
+	font-family: "Quicksand", cursive;
+	font-style: oblique;
+	font-weight: 500;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	line-height: 2.5;
+}
+.page__link {
+	text-decoration: underline;
+	text-decoration-color: violet;
+	text-decoration-style: dotted;
+	color: red;
+	letter-spacing: 10px;
+}
+
+.test-text {
+	font-family: "Migha";
+}
+.test-text p {
+	text-align: right;
+}
+.test-text span {
+	text-shadow: 2px -2px 2px rgba(10, 10, 11, 0.5);
+	text-decoration: underline;
+}
+.test-text + p {
+	text-decoration: line-through;
+	text-decoration-style: double;
+}
+/* ================================= */
+.footer {
+}
+.footer__socials {
+	font-family: "Fleur De Leah";
+	text-align: right;
+	font-size: 22px;
+}
+.footer__up {
+	text-decoration: overline;
+	text-decoration-style: wavy;
+	text-decoration-color: aquamarine;
+	font-size: 24px;
+	font-family: "Fleur De Leah", fantasy;
+}
+.footer__copy {
+	text-align: center;
+	text-decoration: overline;
+}
+
+.socials {
+}
+.socials__label {
+	font-family: "Proxima Nova", sans-serif;
+	font-weight: 600;
+}
+.socials__list {
+}
+.socials__item {
+	text-transform: lowercase;
+}
+
+/* ======================================================================================================================================================== */
+.blog {
+	font-family: "Proxima Nova", sans-serif;
+	color: #2b2929;
+}
+.blog__title {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 1.2; /* 48/40 */
+}
+.title--center {
+	text-align: center;
+}
+.blog__image {
+}
+.blog__text {
+	line-height: 1.87; /* 30/16 */
+}
+.blog__label {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.4; /* 28/20 */
+}
