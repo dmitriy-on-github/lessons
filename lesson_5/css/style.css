@@ -15,20 +15,18 @@
 }
 /* ================================== */
 .header {
-	padding: 0 15px;
 }
 .header__container {
 	max-width: 1070px;
 	margin: 0 auto;
-	text-align: center;
-	padding: 20px 0 0 0;
+	padding: 20px 15px 5px;
 	color: #473f3f;
+	text-align: center;
 	text-transform: uppercase;
 }
 .header__list {
 	margin: 0 -15px;
 	overflow: hidden;
-	font-size: 0;
 }
 .header__link {
 	display: inline-block;
@@ -225,19 +223,15 @@ li {
 }
 /* ================================= */
 .footer {
-	padding: 20px 0;
+	padding: 20px;
 	background-color: #473f3f;
 	color: #fff;
-	text-align: center;
 }
 .footer__up {
 	display: block;
-	text-align: left;
-	padding: 0 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 .footer__copy {
-	font-size: 18px;
-	line-height: 1.2;
+	text-align: center;
 }
