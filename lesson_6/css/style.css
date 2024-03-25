@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap");
+
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* ================================== */
+.title {
+	margin-bottom: 40px;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 1.2; /* 48/40 */
+}
+/* ================================== */
+.header {
+}
+.header__container {
+	max-width: 1070px;
+	margin: 0 auto;
+	padding: 20px 15px 5px;
+	color: #473f3f;
+	text-align: center;
+	text-transform: uppercase;
+}
+.header__list {
+	margin: 0 -15px;
+	overflow: hidden;
+}
+.header__link {
+	display: inline-block;
+	padding: 0 15px;
+	vertical-align: top;
+	font-size: 20px;
+}
+.header__link a {
+	text-decoration: underline;
+}
+/* ================================== */
+.page {
+}
+.page__label {
+	padding: 20px 15px;
+	background-color: #473f3f;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+/* ================================== */
+.blog {
+	padding: 0 15px;
+	background-color: #f8f8f8;
+	font-family: "Proxima Nova", sans-serif;
+	color: #2b2929;
+}
+.blog__container {
+	max-width: 1070px;
+	margin: 0 auto;
+	padding: 40px 0 20px 0;
+}
+.blog__title {
+}
+.blog__image {
+	margin-bottom: 40px;
+}
+.blog__image img {
+	max-width: 100%;
+}
+.blog__text {
+	margin-bottom: 40px;
+	line-height: 1.875; /* 30/16 */
+}
+.blog__text p,
+li {
+	margin-bottom: 20px;
+}
+.blog__text li {
+	background: url("../img/li.svg") 0 0 / 26.67px no-repeat;
+	padding-left: 45px;
+}
+.blog__label {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.4; /* 28/20 */
+	margin-bottom: 30px;
+}
+/* ================================= */
+.explore {
+	background: url("../img/eduplay.png") center / cover #914dff;
+}
+.explore__container {
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 15px;
+	font-family: "Quicksand", sans-serif;
+	color: #fff;
+	overflow: hidden;
+}
+.explore__row {
+	margin: 0 -66px;
+	font-size: 0;
+}
+.explore__column {
+	display: inline-block;
+	padding: 0 66px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.explore__column img {
+	max-width: 100%;
+}
+.explore__content {
+	max-width: 600px;
+	padding: 37px 0;
+}
+.explore__title {
+	margin-bottom: 24px;
+	font-size: 40px;
+	line-height: 1.2; /* 48/40 */
+	font-weight: 700;
+}
+.explore__text {
+	font-size: 20px;
+	line-height: 1.6; /* 32/20 */
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+.explore__button {
+	display: inline-block;
+	max-width: 217px;
+	padding: 12px 20px 12px 40px;
+	border-radius: 8px;
+	color: #0d1216;
+	background: #fff url("../img/hat.png") 20px no-repeat;
+	line-height: 1.5625; /* 25/16 */
+	font-weight: 700;
+}
+/* ================================= */
+.coral {
+	background: url("../img/coral-background-left.svg") 0 85% no-repeat,
+		url("../img/coral-background-right.svg") 100% 70% no-repeat
+			rgba(30, 40, 50, 0.05);
+	overflow: hidden;
+}
+.coral__container {
+	max-width: 1350px;
+	margin: 0 auto;
+	padding: 0 15px;
+	font-family: "Roboto", sans-serif;
+	text-transform: capitalize;
+}
+.coral__row {
+	margin: 0 -57px;
+	font-size: 0;
+	padding: 100px 0 60px 0;
+}
+.coral__column {
+	display: inline-block;
+	padding: 0 57px;
+	font-size: 16px;
+	vertical-align: top;
+}
+.coral__content {
+	padding: 54px 0;
+	max-width: 682px;
+}
+.coral__title {
+	font-weight: 300;
+	font-size: 74px;
+	line-height: 1.3454; /* 74/55 */
+	margin-bottom: 52px;
+}
+.coral__text {
+	font-size: 30px;
+	line-height: 1.83333333; /* 55/30 */
+	margin-bottom: 66px;
+}
+.coral__button {
+	display: inline-block;
+	max-width: 223px;
+	padding: 19px 26px 19px 64px;
+	font-size: 29px;
+	color: #fff;
+	background: url("/img/shop.svg") 26px center no-repeat #1e2832;
+}
+.coral__image {
+	border-radius: 160px 0;
+	max-width: 424px;
+	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+.coral__image img {
+	max-width: 100%;
+	margin: -20px 18px 20px -18px;
+	border-radius: 160px 0;
+	vertical-align: top;
+}
+/* ================================= */
+.practice {
+	font-family: "Roboto", sans-serif;
+	margin: 0 auto;
+	max-width: 1320px;
+	padding: 50px 20px;
+	background-color: #605a5a;
+	color: #fff;
+}
+.practice__title {
+	font-size: 24px;
+	margin-bottom: 40px;
+	padding: 10px;
+	border-top: 7px dashed rgb(0, 119, 255);
+	border-right: 3px solid #eacece;
+	border-bottom: 4px dotted #c75a5a;
+	border-left: 10px double rgb(62, 220, 62);
+}
+.practice__box {
+}
+.box {
+}
+.box__text p {
+	margin-bottom: 30px;
+}
+.outline {
+	outline: 5px solid yellowgreen;
+	outline-offset: 3px;
+}
+.shadow {
+	box-shadow: inset 2px 2px 10px 0px rgba(204, 174, 174, 0.8),
+		5px 5px 5px 10px rgba(190, 50, 186, 0.8);
+}
+.unvisible {
+	border: 1px solid #000;
+	width: 100%;
+	cursor: pointer;
+	padding: 20px;
+}
+.unvisible:hover {
+	visibility: hidden;
+}
+.box__block {
+	background-image: linear-gradient(
+		90deg,
+		#ff3f3a 0%,
+		#3a3dff 50%,
+		#f75e05 100%
+	);
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px 10px 15px 20px;
+}
+.box__background {
+	padding: 20px;
+	margin-bottom: 20px;
+	background-image: url("../img/icon-test.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.box__inline {
+	background-color: #14cd7d;
+}
+.box__image {
+	background-color: #2945fc;
+	display: block;
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 10%;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.box__image:hover {
+	opacity: 1;
+}
+.box__button {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 2px solid #fbeded;
+	background-color: #c72323;
+	border-radius: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1.8px;
+	box-shadow: 0 5px 0px rgba(0, 0, 0, 1);
+}
+.box__button:hover {
+	border: 2px solid #c72323;
+	background-color: transparent;
+	color: #c72323;
+}
+.box__button:focus {
+	outline: 3px dotted #c72323;
+}
+/* ================================= */
+.footer {
+	padding: 20px;
+	background-color: #473f3f;
+	color: #fff;
+}
+.footer__up {
+	display: block;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.footer__copy {
+	text-align: center;
+}
