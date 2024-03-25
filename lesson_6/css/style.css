@@ -185,7 +185,7 @@ li {
 	padding: 19px 26px 19px 64px;
 	font-size: 29px;
 	color: #fff;
-	background: url("/img/shop.svg") 26px center no-repeat #1e2832;
+	background: url("img/shop.svg") 26px center no-repeat #1e2832;
 }
 .coral__image {
 	border-radius: 160px 0;
