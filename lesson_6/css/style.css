@@ -69,6 +69,7 @@
 }
 .blog__image img {
 	max-width: 100%;
+	border-radius: 8px;
 }
 .blog__text {
 	margin-bottom: 40px;
