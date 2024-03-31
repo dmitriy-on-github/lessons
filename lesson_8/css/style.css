@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* ================================== */
+.body {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+}
+/* ================================== */
+.header {
+	background-color: #efe4e4;
+	color: #473f3f;
+}
+.header__container {
+	max-width: 1070px;
+	margin: 0 auto;
+	padding: 20px 15px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.header__label {
+	font-size: 30px;
+	font-weight: 500;
+}
+/* ================================== */
+.page {
+	padding: 40px 15px;
+	background-color: #473f3f;
+	color: #efe4e4;
+}
+.page__container {
+	max-width: 1070px;
+	margin: 0 auto;
+}
+.page img {
+	max-width: 100%;
+}
+.page__content {
+}
+.page__content > * {
+	margin-bottom: 20px;
+}
+.page__content > *:last-child {
+	margin-bottom: 0;
+}
+.page__content li {
+	font-size: 20px;
+}
+.page__image img {
+	vertical-align: middle;
+	padding-right: 20px;
+	max-width: 100%;
+}
+.page__blog {
+	padding: 40px 0;
+}
+.page__blog img {
+	max-width: 100%;
+	border-radius: 8px;
+}
+.page__blog img:not(:last-child) {
+	margin-bottom: 20px;
+}
+.page__blog p {
+	font-size: 20px;
+}
+/* ================================= */
+.footer {
+	padding: 20px;
+	background-color: #473f3f;
+	color: #efe4e4;
+}
+.footer__up {
+	background-color: rgba(239, 228, 228, 0.7);
+	color: #473f3f;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	text-transform: uppercase;
+}
+.footer__up:hover {
+	background-color: #efe4e4;
+}
+.footer__copy {
+	text-align: center;
+	border-top: 1px solid;
+	padding-top: 20px;
+}
