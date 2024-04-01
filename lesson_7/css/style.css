@@ -502,7 +502,7 @@
 .practice__list li:nth-child(3n) {
 	background-color: #0d2225de;
 }
-.practice__list:has(li) {
+.practice__list:has( li) {
 	border-top: 2px solid;
 	border-bottom: 2px solid;
 }
