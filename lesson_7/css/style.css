@@ -389,6 +389,9 @@
 .game_image:hover {
 	visibility: visible;
 }
+.game_image img {
+	max-width: 100%;
+}
 /* ================================= */
 .practice {
 	font-family: "Roboto", sans-serif;
