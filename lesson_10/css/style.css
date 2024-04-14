@@ -106,10 +106,10 @@ body {
 	backdrop-filter: blur(2.5px);
 	max-height: 100vh;
 }
-body:has(#catalog:target) .background {
+body:has(> #catalog:target) .background {
 	display: block;
 }
-body:has(#catalog:target) {
+body:has(> #catalog:target) {
 	overflow: hidden;
 }
 /* ================================= */
