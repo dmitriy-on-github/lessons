@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>10. Позиціонування</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<!-- Випадаюче меню -->
+					<div class="header__menu menu">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#categories" class="menu__link">Картки товарів</a>
+							</li>
+							<li class="menu__item">
+								<a href="#practice" class="menu__link">Практика</a>
+								<div class="sub-menu">
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#decor-list" class="sub-menu__link">Декор списку</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#decor" class="sub-menu__link">Декор</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#position" class="sub-menu__link">Позиціонування</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#product-card" class="sub-menu__link">Картка продукту</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+
+			<main id="page" class="page">
+				<div id="categories" class="page__label">Картки товарів</div>
+				<div class="categories">
+					<div class="categories__navigation navigation">
+						<div class="navigation__container">
+							<a href="#" class="navigation__logo">
+								<img src="img/header/logo.svg" alt="logo">
+							</a>
+							<a href="#catalog" class="navigation__button">Каталог</a>
+							<div id="catalog" class="navigation__catalog catalog">
+								<ul class="catalog__list">
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/01.svg" alt="icon">
+											<span>Ліжка</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка від Krovato</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка з підйомним механізмом</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка Акції</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка з м'яким узголів'ям</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дерев'яні ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дитячі ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Двоспальні ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Односпальні ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Металеві ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка з вбудованим матрацом</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дивани-ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка подіуми</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Металеві ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка з вбудованим матрацом</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дивани-ліжка</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Ліжка подіуми</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/02.svg" alt="icon">
+											<span>Матраци</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Односпальні матраци</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Двоспальні матраци</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Пружинний блок Bonnel</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Пружинний блок Pocket Spring</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Безпружинні матраци</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Матраци з ефектом Зима-Літо</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Футони</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дитячі матраци</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Матраци Економ</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/03.svg" alt="icon">
+											<span>М'які меблі</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дивани з Акції</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Прямі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Кутові дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дитячі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Тахти</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Крісла</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/04.svg" alt="icon">
+											<span>Шафи</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Шафи купе</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Розпашні шафи</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Готові шафи купе</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Кутові шафи</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Кутові шафи купе</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Пенали</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Шафи в передпокій</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Шафи у вітальню</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Шафи в спальню</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Шафи в дитячу</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Офісні шафи</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/05.svg" alt="icon">
+											<span>Комоди</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дивани з Акції</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Прямі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Кутові дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дитячі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Тахти</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Крісла</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/06.svg" alt="icon">
+											<span>Тумби</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Обідні стільці</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Табуретки</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/07.svg" alt="icon">
+											<span>Столи</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дивани з Акції</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Прямі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Кутові дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дитячі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Тахти</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Крісла</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/08.svg" alt="icon">
+											<span>Стільці</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Обідні стільці</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Табуретки</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/09.svg" alt="icon">
+											<span>Меблеві стіни</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дивани з Акції</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Прямі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Кутові дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дитячі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Тахти</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Крісла</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="catalog__item">
+										<a href="#" class="catalog__link">
+											<img src="img/categories/icons/10.svg" alt="icon">
+											<span>Кухні</span>
+										</a>
+										<div class="catalog__sub sub">
+											<ul class="sub__list">
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дивани з Акції</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Прямі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Кутові дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Дитячі дивани</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Тахти</a>
+												</li>
+												<li class="sub__item">
+													<a href="#" class="sub__link">Крісла</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="categories__container">
+						<h2 class="categories__title">Популярні категорії</h2>
+						<div class="categories__row">
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Ліжка</a>
+										<div class="top-item__number">54</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/01.webp" type="image/webp">
+											<img src="img/image.jpg" alt="Ліжко">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Матраци</a>
+										<div class="top-item__number">30</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/02.webp" type="image/webp">
+											<img src="img/categories/02.png" alt="Матрац">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">М'які меблі</a>
+										<div class="top-item__number">196</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/03.webp" type="image/webp">
+											<img src="img/categories/03.png" alt="Софа">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Шафи</a>
+										<div class="top-item__number">79</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/04.webp" type="image/webp">
+											<img src="img/categories/04.png" alt="Шафа">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Комоди</a>
+										<div class="top-item__number">54</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/05.webp" type="image/webp">
+											<img src="img/categories/05.png" alt="Комод">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Тумби</a>
+										<div class="top-item__number">64</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/06.webp" type="image/webp">
+											<img src="img/categories/06.png" alt="Тумба">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Столи</a>
+										<div class="top-item__number">35</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/07.webp" type="image/webp">
+											<img src="img/categories/07.png" alt="Стол">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Стільці</a>
+										<div class="top-item__number">89</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/08.webp" type="image/webp">
+											<img src="img/categories/08.png" alt="Стілець">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Меблеві стіни</a>
+										<div class="top-item__number">24</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/09.webp" type="image/webp">
+											<img src="img/categories/09.png" alt="Меблева стіна">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+							<div class="categories__item item">
+								<div class="item__content content-item">
+									<div class="content-item__top top-item">
+										<a href="#" class="top-item__name">Кухні</a>
+										<div class="top-item__number">30</div>
+									</div>
+									<a href="#" class="content-item__image">
+										<picture>
+											<source srcset="img/categories/10.webp" type="image/webp">
+											<img src="img/categories/10.png" alt="Кухня">
+										</picture>
+									</a>
+									<a href="#" class="content-item__link">
+										<img src="img/categories/arrow.svg" alt="arrow">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="practice" class="page__label">практика</div>
+				<!-- Декор списку -->
+				<ul id="decor-list" class="list">
+					<li class="list__item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+						eligendi, dolore distinctio aperiam perspiciatis repellendus dolorem
+						voluptate blanditiis iure officia! Maxime eveniet alias officia eum dolor
+						sit quaerat soluta delectus?
+					</li>
+					<li class="list__item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+						eligendi, dolore distinctio aperiam perspiciatis repellendus dolorem
+						voluptate blanditiis iure officia! Maxime eveniet alias officia eum dolor
+						sit quaerat soluta delectus?
+					</li>
+					<li class="list__item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+						eligendi, dolore distinctio aperiam perspiciatis repellendus dolorem
+						voluptate blanditiis iure officia! Maxime eveniet alias officia eum dolor
+						sit quaerat soluta delectus?
+					</li>
+					<li class="list__item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+						eligendi, dolore distinctio aperiam perspiciatis repellendus dolorem
+						voluptate blanditiis iure officia! Maxime eveniet alias officia eum dolor
+						sit quaerat soluta delectus?
+					</li>
+					<li class="list__item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+						eligendi, dolore distinctio aperiam perspiciatis repellendus dolorem
+						voluptate blanditiis iure officia! Maxime eveniet alias officia eum dolor
+						sit quaerat soluta delectus?
+					</li>
+					<li class="list__item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+						eligendi, dolore distinctio aperiam perspiciatis repellendus dolorem
+						voluptate blanditiis iure officia! Maxime eveniet alias officia eum dolor
+						sit quaerat soluta delectus?
+					</li>
+				</ul>
+
+				<!-- Декор секції / сайту -->
+				<img class="decor" src="img/frame.svg" alt="Image">
+
+				<!-- Зображення з ефектом №1 -->
+				<div id="decor" class="image">
+					<img class="image__item" src="img/honey.jpg" alt="Image">
+				</div>
+				<!-- Зображення з ефектом №2 -->
+				<div class="some-picture some-picture--margin">
+					<img class="some-picture__item" src="img/image.jpg" alt="Image">
+				</div>
+
+				<!-- Позиціонування -->
+				<div id="position" class="page__blocks blocks">
+					<div class="blocks">
+						<div class="blocks__item">Block 1</div>
+						<div class="blocks__item">position relative</div>
+						<div class="blocks__item">position relative</div>
+						<div class="blocks__item">position absolute</div>
+					</div>
+				</div>
+
+				<!-- Картка продукту -->
+				<div id="product-card" class="product-card product-card--margin">
+					some new
+					<div class="product-card__picture">
+						<div class="product-card__labels">
+							<div class="product-card__label">
+								hot
+							</div>
+							<div class="product-card__label product-card__label--black">
+								sale
+							</div>
+						</div>
+						<a href="#" class="product-card__link">
+							<img class="product-card__image" src="img/image-product.jpg"
+								alt="Image">
+						</a>
+					</div>
+					<h4 class="product-card__title">
+						<a href="#" class="product-card___link-title">Basic Dress Green</a>
+					</h4>
+					<a href="#" class="product-card__category">Dress</a>
+				</div>
+
+				<div class="product-card product-card--margin">
+					<div class="product-card__labels">
+						<div class="product-card__label">
+							hot
+						</div>
+					</div>
+
+					<a href="#" class="product-card__link">
+						<img class="product-card__image" src="img/image-product.jpg" alt="Image">
+					</a>
+					<h4 class="product-card__title">
+						<a href="#" class="product-card___link-title">Basic Dress Green</a>
+					</h4>
+					<a href="#" class="product-card__category">Dress</a>
+				</div>
+
+				<!-- Приклад зміна кьольору svg -->
+				<svg class="some-icon" width="28" height="28" viewBox="0 0 28 28"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.6241 9.71996L11.9041 15.4533L9.70407 13.2533C9.58454 13.1137 9.43745 13.0004 9.27203 12.9203C9.10661 12.8403 8.92643 12.7953 8.74281 12.7882C8.55918 12.7811 8.37607 12.8121 8.20497 12.8791C8.03387 12.9461 7.87847 13.0478 7.74853 13.1778C7.6186 13.3077 7.51692 13.4631 7.44989 13.6342C7.38285 13.8053 7.35191 13.9884 7.359 14.172C7.3661 14.3557 7.41107 14.5358 7.4911 14.7013C7.57113 14.8667 7.68449 15.0138 7.82407 15.1333L10.9574 18.28C11.082 18.4035 11.2297 18.5013 11.3922 18.5677C11.5546 18.634 11.7286 18.6676 11.9041 18.6666C12.2539 18.6652 12.5891 18.5263 12.8374 18.28L19.5041 11.6133C19.629 11.4893 19.7282 11.3419 19.7959 11.1794C19.8636 11.0169 19.8985 10.8426 19.8985 10.6666C19.8985 10.4906 19.8636 10.3163 19.7959 10.1539C19.7282 9.99138 19.629 9.84391 19.5041 9.71996C19.2543 9.47162 18.9163 9.33224 18.5641 9.33224C18.2118 9.33224 17.8739 9.47162 17.6241 9.71996ZM13.9974 0.666626C11.3603 0.666626 8.78245 1.44861 6.5898 2.9137C4.39714 4.37878 2.68818 6.46116 1.67901 8.89751C0.66984 11.3339 0.405795 14.0147 0.920265 16.6012C1.43473 19.1876 2.70461 21.5633 4.56931 23.428C6.43401 25.2927 8.80978 26.5626 11.3962 27.0771C13.9826 27.5916 16.6635 27.3275 19.0998 26.3184C21.5362 25.3092 23.6186 23.6002 25.0837 21.4076C26.5487 19.2149 27.3307 16.637 27.3307 14C27.3307 12.249 26.9859 10.5152 26.3158 8.89751C25.6457 7.27984 24.6636 5.80998 23.4255 4.57187C22.1874 3.33375 20.7175 2.35163 19.0998 1.68157C17.4822 1.0115 15.7484 0.666626 13.9974 0.666626ZM13.9974 24.6666C11.8877 24.6666 9.82544 24.041 8.07132 22.869C6.31719 21.6969 4.95002 20.031 4.14269 18.0819C3.33535 16.1328 3.12412 13.9881 3.53569 11.919C3.94727 9.84986 4.96317 7.94925 6.45493 6.45749C7.94669 4.96573 9.84731 3.94983 11.9164 3.53825C13.9856 3.12667 16.1303 3.33791 18.0794 4.14524C20.0284 4.95258 21.6943 6.31975 22.8664 8.07388C24.0385 9.828 24.6641 11.8903 24.6641 14C24.6641 16.8289 23.5403 19.542 21.5399 21.5424C19.5395 23.5428 16.8264 24.6666 13.9974 24.6666Z"
+						fill="#FFBC57" />
+				</svg>
+			</main>
+
+			<a href="#" class="background"></a>
+
+			<footer class="footer">
+				<a href="#page" class="footer__item">position fixed ^</a>
+			</footer>
+		</div>
+	</body>
+</html>
