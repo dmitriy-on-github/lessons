@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>11 Трансформації</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+
+			<main id="page" class="page">
+				<div class="page__practice">
+					<h2 class="page__label label">2D трансформації</h2>
+					<div class="page__container">
+						<div class="page__block block">
+							<div class="block__item block__item--1">
+								translate(-10px, 20px)
+							</div>
+						</div>
+						<div class="page__block block">
+							<div class="block__item block__item--2">
+								translateY(30px)
+							</div>
+						</div>
+						<div class="page__block block">
+							<div class="block__item block__item--3">
+								translate(10%, 20%)
+							</div>
+						</div>
+						<div class="page__block block">
+							<div class="block__item block__item--4">
+								scale(0.8)
+							</div>
+						</div>
+						<div class="page__block block">
+							<div class="block__item block__item--5">
+								scale(-1, 1)
+							</div>
+						</div>
+						<div class="page__block block">
+							<div class="block__item block__item--6">
+								rotate(-180deg)
+							</div>
+						</div>
+						<div class="page__block block">
+							<div class="block__item block__item--7">
+								skew(10deg, 20deg)
+							</div>
+						</div>
+						<div class="page__block block">
+							<div class="block__item block__item--8">
+								scale(0.6) rotate(45deg) skew(-20deg)<br>
+								transform-origin: top;
+							</div>
+						</div>
+					</div>
+					<div class="page__label label">3D трансформації</div>
+					<div class="page__container">
+						<div class="page__block block block--3d">
+							<div class="block__item block__item--11">
+								perspective: 400px;<br>
+								transform: rotateX(60deg);
+							</div>
+						</div>
+						<div class="page__block block block--3d">
+							<div class="block__item block__item--12">
+								translate3d(10px, 20px, 50px)
+							</div>
+						</div>
+						<div class="page__block block block--3d">
+							<div class="block__item block__item--13">
+								scale3d(-1, 1, 1)
+							</div>
+						</div>
+						<div class="page__block block block--3d">
+							<div class="block__item block__item--14">
+								rotate3d(20, 15, 10, -180deg)
+							</div>
+						</div>
+						<div class="page__block block block--3d block--preserve">
+							<div class="block__item block__item--15">
+								transform: rotateX(60deg);
+							</div>
+						</div>
+						<div class="page__block block block--body">
+							<div class="block__item block__item--front">
+								FRONT
+							</div>
+							<div class="block__item block__item--back">
+								BACK
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="page__auto auto">
+					<h2 class="auto__label label">автобус</h2>
+					<div class="auto__container">
+						<div class="auto__body">
+							<div class="auto__up"></div>
+							<div class="auto__name">FLiXBUS</div>
+							<div class="auto__windows windows-auto">
+								<div class="windows-auto__window">П</div>
+								<div class="windows-auto__window">р</div>
+								<div class="windows-auto__window">и</div>
+								<div class="windows-auto__window">в</div>
+								<div class="windows-auto__window">і</div>
+								<div class="windows-auto__window">т</div>
+							</div>
+							<div class="auto__light auto__light--left"></div>
+							<div class="auto__baggage auto__baggage--left"></div>
+							<div class="auto__door auto__door--left"></div>
+							<div class="auto__baggage auto__baggage--center"></div>
+							<div class="auto__baggage auto__baggage--right"></div>
+							<div class="auto__wheels">
+								<div class="auto__wheel auto__wheel--left"></div>
+								<div class="auto__wheel auto__wheel--right"></div>
+							</div>
+							<div class="auto__door auto__door--right">
+								<div class="auto__door--inner"></div>
+							</div>
+							<div class="auto__light auto__light--right"></div>
+							<div class="auto__mirror mirror">
+								<div class="mirror__inner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>
