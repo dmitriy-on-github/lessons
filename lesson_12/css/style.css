@@ -1,0 +1,366 @@
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #333;
+	color: #f8f8f8;
+}
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	overflow: clip;
+	background: url("../img/kyiv.webp") 0 0 no-repeat;
+}
+[class*="__container"] {
+	max-width: 1350px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/* ================================= */
+.page {
+	width: 100%;
+}
+.page__auto {
+}
+.page__speak {
+}
+.speak {
+}
+.speak__girl,
+.speak__man {
+	position: absolute;
+	z-index: 10;
+	bottom: 29%;
+	width: 181px;
+	min-height: 90px;
+	border-radius: 40px 20px 45px 0px;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.3;
+	visibility: hidden;
+	opacity: 0;
+}
+.speak__girl {
+	background-color: #ff61a1;
+	right: 32%;
+}
+.girl-speak {
+}
+.girl-speak-1 {
+	animation: speakShow 3s ease 9s;
+}
+.girl-speak-2 {
+	animation: speakShow 3s ease 15s;
+}
+.speak__man {
+	background-color: #1c52e5;
+	right: 21%;
+	animation: speakShow 3s ease 12s;
+}
+/* ================================= */
+.auto__body {
+	padding: 10px 15px 0 10px;
+	position: absolute;
+	left: 30%;
+	bottom: 15%;
+	height: 240px;
+	width: 800px;
+	border-radius: 25px 120px 20px 60px;
+	background-color: #74d701;
+	animation: moveBus 3s linear, moveBusRight 2s linear 26s;
+}
+.auto__up {
+	position: absolute;
+	top: -12px;
+	left: 20%;
+	height: 12px;
+	width: 350px;
+	border-radius: 55px 55px 0 0;
+	background-color: #74d701;
+}
+.auto__name {
+	position: absolute;
+	top: 40%;
+	left: 48%;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 10px;
+	transform: translate(0px, 0px);
+	transition: transform 0.6s ease 0.4s;
+}
+.auto__windows {
+	position: relative;
+	z-index: 1;
+	height: 88px;
+	margin-right: 10px;
+	background-color: #2b303b;
+	border-radius: 20px 150px 20px 20px;
+}
+.windows-auto {
+	font-size: 0;
+}
+.windows-auto__window {
+	display: inline-block;
+	font-size: 30px;
+	width: 126px;
+	height: 100%;
+	color: #2b303b;
+}
+.windows-auto__window:not(:last-child) {
+	border-right: 1px solid #000;
+}
+.auto__door {
+}
+.door-auto {
+	position: absolute;
+	bottom: -2px;
+	width: 61px;
+	height: 143px;
+	border: 2px solid #2b303b;
+	border-radius: 6px 6px 0 0;
+	background-color: #2b303b;
+}
+.door-auto--left {
+	left: calc(50% - 115px);
+}
+.door-auto--left:after {
+	content: "";
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../img/girl-01.png") 50% 0 / auto 100% no-repeat;
+	transform: translate(-1000px, 30%);
+	animation: girlMove 6s ease 4s, girlBack 2s ease 19s;
+	animation-fill-mode: forwards;
+}
+.door-auto--right {
+	right: 25px;
+}
+.door-auto--right:after {
+	content: "";
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../img/man-01.png") 50% 0 / auto 100% no-repeat;
+	animation: manMove 2s ease 6s, manMove 2s ease 20s 1 reverse;
+	animation-fill-mode: forwards;
+}
+.door-auto--right:after img {
+	max-width: 100%;
+}
+.door-auto__inner {
+	position: absolute;
+	z-index: 4;
+	bottom: -2px;
+	left: -2px;
+	width: 63px;
+	height: 143px;
+	border: 2px solid #2b303b;
+	border-radius: 6px 6px 0 0;
+	background-color: #74d701;
+	transition: all 0.3s ease 0.4s;
+	animation: openDoor 1s ease 4s, openDoor 1s ease 24s 1 reverse;
+	animation-fill-mode: forwards;
+}
+.door-auto:hover .door-auto__inner {
+	transform: translate(-63px, 0px);
+	transition: all 0.6s;
+}
+.auto__baggage {
+	position: absolute;
+	bottom: -2px;
+	width: 90px;
+	height: 80px;
+	border: 2px solid #2b303b;
+	background-color: #2b303b;
+}
+.auto__baggage--left {
+	left: 70px;
+}
+.auto__baggage--center {
+	left: calc(50% - 32px);
+}
+.auto__baggage--right {
+	left: calc(50% + 56px);
+}
+.baggage-auto {
+}
+.baggage-auto__inner {
+	position: absolute;
+	z-index: 1;
+	bottom: -2px;
+	left: -2px;
+	width: 90px;
+	height: 80px;
+	border: 2px solid #2b303b;
+	background-color: #74d701;
+	transition: all 0.3s;
+}
+.auto__baggage:hover .baggage-auto__inner {
+	transform: translate(0px, -60px);
+	transition: all 0.6s;
+}
+.auto__mirror {
+	position: absolute;
+	top: 12px;
+	right: -20px;
+	width: 120px;
+	height: 50px;
+	background-color: #131212;
+	border-radius: 10px 26px 20px 10px;
+	clip-path: polygon(
+		100% 0,
+		100% 100%,
+		90% 95%,
+		86% 56%,
+		83% 45%,
+		79% 38%,
+		72% 30%,
+		60% 25%,
+		0 25%,
+		0 0
+	);
+}
+.mirror {
+}
+.mirror__inner {
+}
+.auto__light {
+	position: absolute;
+	bottom: 40px;
+	width: 15px;
+	height: 30px;
+	border-radius: 25px 20px 25px 50px;
+	background-color: #dbbfbf;
+	transition: all 0.3s;
+}
+.auto__light--left {
+	left: 4px;
+	height: 40px;
+	background-color: #c44f4f;
+	box-shadow: -20px 0px 40px #ff0000;
+}
+.auto__light--right {
+	right: 0;
+	box-shadow: 20px 0px 40px #ffff00;
+}
+.auto__wheels {
+	transition: all 0.3s;
+}
+.auto__wheel {
+	transition: all 0.6s;
+	position: absolute;
+	z-index: 2;
+	top: calc(100% - 50px);
+	width: 80px;
+	height: 80px;
+	background-color: #2b303b;
+	border-radius: 50%;
+	border: 1px dashed rgba(0, 0, 0, 0.5);
+	animation: rotateWheels 3s linear, rotateWheels 2s linear 26s;
+}
+.auto__wheel--left {
+	left: 180px;
+}
+.auto__wheel--right {
+	right: 140px;
+}
+.auto__wheels:hover .auto__wheel {
+	transform: rotate(-360deg);
+}
+.auto__wheel::after {
+	content: "";
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	background-color: #74d701;
+	border-radius: 50%;
+	border: 3px dotted #2b303b;
+}
+/* ================================= */
+@keyframes rotateWheels {
+	0% {
+		rotate: 0deg;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
+@keyframes moveBus {
+	0% {
+		transform: translate(-130%, 0px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+@keyframes moveBusRight {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	100% {
+		transform: translate(150%, 0px);
+	}
+}
+@keyframes openDoor {
+	0% {
+		transform: translate(0, 0px);
+	}
+	100% {
+		transform: translate(-63px, 0px);
+	}
+}
+@keyframes manMove {
+	0% {
+		transform: translate(0px, 0px);
+		position: relative;
+		z-index: 1;
+	}
+	100% {
+		transform: translate(0px, 60%) scale(1.8);
+		position: relative;
+		z-index: 5;
+	}
+}
+@keyframes girlMove {
+	0% {
+		transform: translate(-1000px, 0px);
+	}
+	100% {
+		transform: translate(200px, 60%) scale(1.7);
+		position: relative;
+		z-index: 5;
+	}
+}
+@keyframes girlBack {
+	0% {
+		transform: translate(200px, 60%) scale(1.7) rotateY(180deg);
+		position: relative;
+		z-index: 5;
+	}
+	100% {
+		transform: translate(0px, 0px) scale(1) rotateY(180deg);
+		position: relative;
+		z-index: 3;
+	}
+}
+@keyframes speakShow {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
