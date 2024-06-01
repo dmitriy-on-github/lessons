@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>18. Препроцесор SASS/SCSS</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<a href="#" class="header__logo">Video Alchemist</a>
+					<div data-da=".burger-header__container, 767.98, 1"
+						class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" class="menu__link">home</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">about</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">portfolio</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">testimonials</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">contact</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div data-da=".about__container, 767.98"
+						class="header__socials socials-header">
+						<a href="#" target="_blank" class="socials-header__item">
+							<img src="img/header/facebook.svg" alt="facebook">
+						</a>
+						<a href="#" target="_blank" class="socials-header__item">
+							<img src="img/header/linkedin.svg" alt="linkedin">
+						</a>
+						<a href="#" target="_blank" class="socials-header__item">
+							<img src="img/header/youtube.svg" alt="youtube">
+						</a>
+					</div>
+					<button type="button"
+						class="header__icon icon icon--menu"><span></span></button>
+				</div>
+				<div class="header__burger burger-header">
+					<div class="burger-header__container">
+
+					</div>
+				</div>
+			</header>
+
+			<main class="page">
+
+				<section class="page__hero hero">
+					<div class="hero__container">
+						<div class="hero__content">
+							<div class="hero__body">
+								<div class="hero__label">Jimmy Turner</div>
+								<h1 class="hero__title">Professional video editor</h1>
+								<div class="hero__text">Making your videos look more cool.</div>
+								<button class="hero__button">lets talk</button>
+							</div>
+						</div>
+						<div class="hero__image image-hero">
+							<div data-da=".picture, 767.98, 0" class="image-hero__main">
+								<picture>
+									<source srcset="img/hero/man.webp" type="image/webp">
+									<img src="img/hero/man.png" alt="man">
+								</picture>
+							</div>
+							<picture>
+								<source srcset="img/hero/light-left.webp" type="image/webp">
+								<img class="image-hero__light-left" src="img/hero/light-left.png"
+									alt="light-left">
+							</picture>
+							<picture>
+								<source srcset="img/hero/light-right.webp" type="image/webp">
+								<img class="image-hero__light-right" src="img/hero/light-right.png"
+									alt="light-right">
+							</picture>
+							<picture>
+								<source srcset="img/hero/pr.webp" type="image/webp">
+								<img class="image-hero__letters-pr" src="img/hero/pr.png" alt="PR">
+							</picture>
+							<picture>
+								<source srcset="img/hero/ae.webp" type="image/webp">
+								<img class="image-hero__letters-ae" src="img/hero/ae.png" alt="AE">
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section class="page__picture picture">
+					<div class="picture__container">
+
+					</div>
+				</section>
+				<section class="page__about about">
+					<div class="about__container">
+						<h2 class="about__title title title--center">About me</h2>
+						<div class="about__text">
+							<p>
+								Welcome to the cinematic realm of Jimmy, where creativity meets
+								technology to craft visually stunning narratives. With a passion for
+								storytelling and a keen eye for detail, I embark on a journey to
+								transform ordinary footage into extraordinary visual experiences.
+							</p>
+						</div>
+						<ul data-da=".hero, 767.98" class="about__list">
+							<li class="about__item">Cash cow editing</li>
+							<li class="about__item">Reels editng</li>
+							<li class="about__item">logo animation</li>
+							<li class="about__item">podcast edit</li>
+							<li class="about__item">Cash cow editing</li>
+							<li class="about__item">Reels editng</li>
+							<li class="about__item">logo animation</li>
+							<li class="about__item">podcast edit</li>
+							<li class="about__item">Vlogs editing</li>
+						</ul>
+					</div>
+				</section>
+				<section class="page__edits edits">
+					<div class="edits__container">
+						<h2 class="edits__title title">my best edits</h2>
+						<div class="edits__row">
+							<a href="#" target="_blank" class="edits__item item-edits">
+								<div class="item-edits__content">
+									<img class="item-edits__image" src="img/edits/01.webp"
+										alt="typing on a laptop">
+									<img class="item-edits__icon" src="img/edits/play.svg" alt="play">
+								</div>
+								<div class="item-edits__label">CAsh cow</div>
+							</a>
+							<a href="#" target="_blank" class="edits__item item-edits">
+								<div class="item-edits__content">
+									<img class="item-edits__image" src="img/edits/02.webp"
+										alt="dollars">
+									<img class="item-edits__icon" src="img/edits/play.svg" alt="play">
+								</div>
+								<div class="item-edits__label">reel</div>
+							</a>
+							<a href="#" target="_blank" class="edits__item item-edits">
+								<div class="item-edits__content">
+									<img class="item-edits__image" src="img/edits/03.webp"
+										alt="a man riding a motorcycle on a road">
+									<img class="item-edits__icon" src="img/edits/play.svg" alt="play">
+								</div>
+								<div class="item-edits__label">vlog</div>
+							</a>
+							<a href="#" target="_blank" class="edits__item item-edits">
+								<div class="item-edits__content">
+									<img class="item-edits__image" src="img/edits/04.webp"
+										alt="blue and white plastic toy">
+									<img class="item-edits__icon" src="img/edits/play.svg" alt="play">
+								</div>
+								<div class="item-edits__label">CAsh cow</div>
+							</a>
+							<a href="#" target="_blank" class="edits__item item-edits">
+								<div class="item-edits__content">
+									<img class="item-edits__image" src="img/edits/05.webp"
+										alt="a man with headphones on in front of a microphone">
+									<img class="item-edits__icon" src="img/edits/play.svg" alt="play">
+								</div>
+								<div class="item-edits__label">podcast</div>
+							</a>
+							<a href="#" target="_blank" class="edits__item item-edits">
+								<div class="item-edits__content">
+									<img class="item-edits__image" src="img/edits/06.webp"
+										alt="pair of squirrels">
+									<img class="item-edits__icon" src="img/edits/play.svg" alt="play">
+								</div>
+								<div class="item-edits__label">CAsh cow</div>
+							</a>
+						</div>
+					</div>
+				</section>
+
+			</main>
+
+			<footer class="footer"></footer>
+		</div>
+		<script src="js/script.js"></script>
+		<script src="js/dynamic_adapt.js"></script>
+	</body>
+</html>
