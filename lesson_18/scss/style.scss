@@ -381,7 +381,7 @@ body._lock {
 	&__label {
 		@include adaptiveValue("font-size", 18, 14, 0, $containerWidth, 393);
 		line-height: 1.11; /* 20/18 */
-		letter-spacing: -2%;
+		letter-spacing: -0.28px;
 		display: grid;
 		@include adaptiveValue("gap", 20, 3, 0, $containerWidth, 393);
 		&::after {
@@ -415,7 +415,7 @@ body._lock {
 	&__text {
 		@include adaptiveValue("font-size", 18, 14, 0, $containerWidth, 393);
 		line-height: 2.22; /* 40/18 */
-		letter-spacing: -2%;
+		letter-spacing: -0.28px;
 		text-transform: capitalize;
 		@media (max-width: $mobileSmall) {
 			line-height: 1.07; /* 15/14 */
@@ -590,7 +590,7 @@ body._lock {
 		p {
 			@include adaptiveValue("font-size", 18, 14, 0, $containerWidth, 393);
 			line-height: 2.18;
-			letter-spacing: -2%;
+			letter-spacing: -0.28px;
 			max-width: 992px;
 			margin: 0 auto;
 		}
