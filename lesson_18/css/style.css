@@ -768,7 +768,7 @@ body._lock {
 }
 .hero__label {
   line-height: 1.11; /* 20/18 */
-  letter-spacing: -2%;
+  letter-spacing: -0.28px;
   display: grid;
 }
 @media (min-width: 83.25em) {
@@ -865,7 +865,7 @@ body._lock {
 }
 .hero__text {
   line-height: 2.22; /* 40/18 */
-  letter-spacing: -2%;
+  letter-spacing: -0.28px;
   text-transform: capitalize;
 }
 @media (min-width: 83.25em) {
@@ -1447,7 +1447,7 @@ body._lock {
 }
 .about__text p {
   line-height: 2.18;
-  letter-spacing: -2%;
+  letter-spacing: -0.28px;
   max-width: 992px;
   margin: 0 auto;
 }
