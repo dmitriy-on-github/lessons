@@ -378,10 +378,13 @@ body._lock {
 	}
 	// .products__item
 	&__item {
-		flex: 0 0 toRem(290);
+		flex: 0 0 toRem(312);
 		display: flex;
 		flex-direction: column;
 		gap: toRem(18);
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 toRem(290);
+		}
 	}
 	// .products__card
 	&__card {
@@ -471,7 +474,6 @@ body._lock {
 }
 .card {
 	position: relative;
-	display: block;
 	@media (any-hover: hover) {
 		&:hover .actions-card {
 			opacity: 1;
@@ -480,10 +482,14 @@ body._lock {
 	}
 	// .card__image
 	&__image {
-		aspect-ratio: 312 / 400;
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
+		display: block;
+		background-color: #ededed;
+		img {
+			aspect-ratio: 312 / 400;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 	// .card__labels
 	&__labels {
