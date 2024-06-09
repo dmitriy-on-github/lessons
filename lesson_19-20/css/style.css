@@ -1589,8 +1589,8 @@ body._lock {
 }
 .products__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 18.125rem;
-          flex: 0 0 18.125rem;
+      -ms-flex: 0 0 19.5rem;
+          flex: 0 0 19.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1599,6 +1599,13 @@ body._lock {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.125rem;
+}
+@media (max-width: 479.98px) {
+  .products__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 18.125rem;
+            flex: 0 0 18.125rem;
+  }
 }
 .products__body {
   padding: 0 0.625rem 0.625rem;
@@ -1742,7 +1749,6 @@ body._lock {
 
 .card {
   position: relative;
-  display: block;
 }
 @media (any-hover: hover) {
   .card:hover .actions-card {
@@ -1751,6 +1757,10 @@ body._lock {
   }
 }
 .card__image {
+  display: block;
+  background-color: #ededed;
+}
+.card__image img {
   aspect-ratio: 312/400;
   width: 100%;
   height: 100%;
