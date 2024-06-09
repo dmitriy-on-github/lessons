@@ -1,0 +1,800 @@
+@use "sass:math";
+
+// Локальне підключення шрифтів
+// @import "_fonts.scss";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+
+$fontFamily: "Open Sans";
+$fontSize: 16;
+$mainColor: #1e2832;
+$bgColor: #ff6f61;
+:root {
+	--header-height: clamp(3.125rem, 2.625rem + 2.5vw, 5.625rem);
+}
+// Налаштування адаптивної сітки =============================
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+// ==========================================================
+$pc: $containerWidth;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+body._lock {
+	overflow: hidden;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	main {
+		flex-grow: 1;
+	}
+}
+[class*="__container"] {
+	max-width: toRem(1350);
+	margin: 0 auto;
+	padding: 0 toRem(15);
+}
+@import "_header.scss";
+@import "_footer.scss";
+//======================================
+.labels {
+	position: absolute;
+	top: toRem(22);
+	left: 0;
+	display: grid;
+	gap: toRem(10);
+	// .labels__item
+	&__item {
+		padding: toRem(5) toRem(12);
+		font-size: toRem(12);
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+		// .labels__item--red
+		&--red {
+			background-color: $bgColor;
+		}
+		// .labels__item--black
+		&--black {
+			background-color: $mainColor;
+		}
+	}
+}
+.title {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	@include adaptiveValue("font-size", 50, 30);
+	text-transform: capitalize;
+	text-align: center;
+	line-height: 1.2;
+	&--margin-74 {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 74, 30);
+		}
+	}
+	&--margin-60 {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 30);
+		}
+	}
+	&--margin-35 {
+		&:not(:last-child) {
+			margin-bottom: toRem(35);
+		}
+	}
+}
+// ======================================
+.page {
+	// padding-top: var(--header-height);
+	// .page__coral
+	&__coral {
+	}
+	// .page__brands
+	&__brands {
+	}
+	// .page__explore
+	&__explore {
+	}
+	// .page__products
+	&__products {
+	}
+	// .page__follow
+	&__follow {
+	}
+	// .page__collection
+	&__collection {
+	}
+}
+// ======================================
+.coral {
+	position: relative;
+	font-family: "Roboto", sans-serif;
+	background:
+		//url("../img/hero/coral-background-left.svg") 0 85% no-repeat,
+		//url("../img/hero/coral-background-right.svg") 100% 70% no-repeat
+		rgba(30, 40, 50, 0.05);
+	overflow: hidden;
+	@include adaptiveValue("padding-top", 70, 30);
+	@include adaptiveValue("padding-bottom", 60, 40);
+	text-transform: capitalize;
+	&__decor {
+		position: absolute;
+		z-index: -1;
+		&--left {
+			bottom: 12%;
+			left: 0;
+		}
+		&--right {
+			top: 32%;
+			right: 0;
+		}
+		@media (max-width: toEm(1200)) {
+			display: none;
+		}
+	}
+	&__row {
+		display: flex;
+		@include adaptiveValue("gap", 98, 20, 0, $containerWidth, 550);
+		@media (max-width: toEm(549.98)) {
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+	&__content {
+		@include adaptiveValue("padding-top", 54, 0);
+		@media (min-width: toEm(550)) {
+			max-width: 51.667%;
+		}
+	}
+	&__title {
+		font-weight: 300;
+		@include adaptiveValue("font-size", 74, 37);
+		line-height: 1.3454; /* 74/55 */
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 52, 15);
+		}
+	}
+	&__text {
+		@include adaptiveValue("font-size", 30, 16);
+		line-height: 1.83; /* 55/30 */
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 66, 20);
+		}
+	}
+	&__button {
+		padding: toRem(19) toRem(26) toRem(19) toRem(29);
+		@include adaptiveValue("font-size", 29, 15);
+		color: #fff;
+		background-color: $mainColor;
+		display: inline-flex;
+		column-gap: toRem(11);
+		justify-content: center;
+		align-items: center;
+		transition: background-color 0.3s;
+		img {
+			width: toRem(24);
+			aspect-ratio: 1/1;
+			object-fit: contain;
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			padding: toRem(15) toRem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $bgColor;
+			}
+		}
+	}
+	&__image {
+		margin-right: toRem(20);
+		flex: 1 1 toRem(424);
+		position: relative;
+		&::before {
+			border-radius: 30% 0;
+			border: 1px solid rgba(0, 0, 0, 0.25);
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: toRem(18);
+			top: toRem(20);
+		}
+	}
+	&__image img {
+		aspect-ratio: 442 / 562;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		// margin: toRem(-20) toRem(18) toRem(-20) toRem(-18);
+		position: relative;
+		z-index: 2;
+		border-radius: 30% 0;
+	}
+}
+// =======================================
+.brands {
+	@include adaptiveValue("padding-top", 90, 30);
+	@include adaptiveValue("padding-bottom", 45, 30);
+	// .brands__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(20);
+		justify-content: center;
+	}
+	// .brands__item
+	&__item {
+		img {
+			width: toRem(200);
+			aspect-ratio: 200/70;
+			object-fit: cover;
+		}
+	}
+}
+// =======================================
+.explore {
+	@include adaptiveValue("padding-top", 45, 30);
+	@include adaptiveValue("padding-bottom", 70, 30);
+	// .explore__container
+	&__container {
+		position: relative;
+	}
+	// .explore__title
+	&__title {
+		text-align: center;
+		font-family: "Roboto", sans-serif;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 34, 24);
+		@media (min-width: toEm(1421.98)) {
+			position: absolute;
+			writing-mode: vertical-rl;
+			transform: rotate(180deg) translateX(100%);
+			inset-block-end: 0.4375rem;
+			inset-inline-end: 1.875rem;
+		}
+		@media (max-width: toEm(1421.98)) {
+			padding: toRem(20) 0;
+		}
+	}
+	// .explore__row
+	&__row {
+		display: grid;
+		grid-template: repeat(2, 1fr) / repeat(auto-fill, minmax(toRem(250), 1fr));
+		gap: toRem(24);
+	}
+	// .explore__item
+	&__item {
+		position: relative;
+		@media (min-width: toEm(549.98)) {
+			&:nth-child(10n + 1),
+			&:nth-child(10n + 8) {
+				grid-column: span 2;
+				grid-row: span 2;
+			}
+			&:only-child {
+				grid-column: span 4;
+				grid-row: span 2;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover .explore__info {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	// .explore__labels
+	&__labels {
+	}
+	// .explore__image
+	&__image {
+		aspect-ratio: 1 / 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	// .explore__info
+	&__info {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@media (any-hover) {
+			& {
+				transition:
+					opacity 0.3s,
+					visibility 0.3s;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}
+.info-explore {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: toRem(16);
+	color: #fff;
+	background-color: $mainColor;
+	padding: toRem(14) toRem(15);
+	font-weight: 600;
+	text-transform: capitalize;
+	// .info-explore__title
+	&__title {
+	}
+	// .info-explore__quantity
+	&__quantity {
+		text-align: right;
+	}
+}
+// =======================================
+.products {
+	@include adaptiveValue("padding-top", 70, 30);
+	@include adaptiveValue("padding-bottom", 70, 30);
+	// .products__container
+	&__container {
+	}
+	// .products__title
+	&__title {
+	}
+	// .products__categories
+	&__categories {
+	}
+	// .products__row
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(245), 1fr));
+		// justify-items: center;
+		@include adaptiveValue("gap", 24, 15);
+	}
+	// .products__items
+	.products__items {
+		display: flex;
+		overflow-x: auto;
+		@include adaptiveValue("gap", 24, 15);
+	}
+	// .products__item
+	&__item {
+		flex: 0 0 toRem(290);
+		display: flex;
+		flex-direction: column;
+		gap: toRem(18);
+	}
+	// .products__card
+	&__card {
+	}
+	// .products__body
+	&__body {
+		padding: 0 toRem(10) toRem(10);
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		gap: toRem(16);
+	}
+	// .products__name
+	&__name {
+		font-weight: 600;
+		flex: 1 1 auto;
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $bgColor;
+			}
+		}
+	}
+	// .products__details
+	&__details {
+	}
+}
+.categories {
+	&:not(:last-child) {
+		margin-bottom: toRem(35);
+	}
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include adaptiveValue("gap", 20, 15);
+	// .categories__list
+	&__list {
+		display: flex;
+		@include adaptiveValue("gap", 40, 15);
+		flex-wrap: wrap;
+	}
+	// .categories__item
+	&__item {
+	}
+	// .categories__link
+	&__link {
+		color: rgba(0, 0, 0, 0.5);
+		font-weight: 600;
+		text-transform: capitalize;
+		transition: color 0.3s;
+		// .categories__link--active
+		&--active {
+			color: #000;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $bgColor;
+			}
+		}
+	}
+	// .categories__button
+	&__button {
+	}
+}
+.button-categories {
+	flex: 0 0 auto;
+	text-transform: capitalize;
+	color: #fff;
+	background-color: $mainColor;
+	padding: toRem(9) toRem(15) toRem(9) toRem(17);
+	display: inline-flex;
+	gap: toRem(5);
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $bgColor;
+		}
+	}
+	// .button-categories__icon
+	&__icon {
+		width: toRem(16);
+		aspect-ratio: 16/14;
+		object-fit: contain;
+	}
+}
+.card {
+	position: relative;
+	display: block;
+	@media (any-hover: hover) {
+		&:hover .actions-card {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// .card__image
+	&__image {
+		aspect-ratio: 312 / 400;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	// .card__labels
+	&__labels {
+	}
+	// .card__actions
+	&__actions {
+	}
+}
+.actions-card {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	background-color: $mainColor;
+	padding: toRem(15) toRem(14) toRem(15) toRem(14);
+	display: flex;
+	flex-wrap: wrap;
+	gap: toRem(20);
+	justify-content: space-between;
+	align-items: center;
+	@media (any-hover) {
+		& {
+			transition:
+				opacity 0.3s,
+				visibility 0.3s;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+	// .actions-card__icons
+	&__icons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: toRem(24);
+	}
+	// .actions-card__button
+	&__button {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		justify-content: center;
+		font-size: toRem(18);
+		font-family: "Roboto", sans-serif;
+		img {
+			width: toRem(20);
+			height: toRem(19);
+			object-fit: contain;
+		}
+		span {
+			transition: color 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover span {
+				color: $bgColor;
+			}
+		}
+	}
+}
+.icons-card {
+	// .icons-card__button
+	&__button {
+		width: toRem(20);
+		img {
+			width: 100%;
+			aspect-ratio: 20/19;
+			object-fit: contain;
+		}
+		transition: transform 0.3s;
+		will-change: transform;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+.details-products {
+	display: flex;
+	flex-wrap: wrap;
+	gap: toRem(12);
+	justify-content: space-between;
+	align-items: center;
+	// .details-products__type
+	&__type {
+		color: rgba(0, 0, 0, 0.5);
+		text-transform: capitalize;
+	}
+	// .details-products__prices
+	&__prices {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: toRem(12);
+		text-align: end;
+	}
+	// .details-products__price
+	&__price {
+		font-weight: 600;
+	}
+	// .details-products__price--old
+	&__price--old {
+		font-size: toRem(14);
+		color: rgba(0, 0, 0, 0.5);
+		text-decoration: line-through;
+	}
+	// .details-products__price--new
+	&__price--new {
+		color: $bgColor;
+	}
+}
+// ===================================
+.follow {
+	background-color: #f4f4f5;
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 100, 30);
+	// .follow__container
+	&__container {
+	}
+	// .follow__title
+	&__title {
+	}
+	// .follow__items
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include adaptiveValue("gap", 24, 16);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 30);
+		}
+	}
+	// .follow__item
+	&__item {
+		flex: 0 0 toRem(200);
+		@media (any-hover: hover) {
+			&:hover .follow__link::after {
+				opacity: 1;
+			}
+		}
+	}
+	// .follow__link
+	&__link {
+		display: block;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background:
+				url("../img/follow/hover-icon.svg") center / toRem(48) toRem(48) no-repeat,
+				rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+		&:focus-visible::after {
+			opacity: 1;
+		}
+	}
+	// .follow__image
+	&__image {
+		aspect-ratio: 1/1;
+		width: 100%;
+		object-fit: cover;
+	}
+	// .follow__form
+	&__form {
+		max-width: toRem(760);
+		margin: 0 auto;
+		display: flex;
+		gap: toRem(26);
+		color: rgba(31, 41, 51, 0.5);
+	}
+	// .follow__input
+	&__input {
+		flex-grow: 1;
+		font-family: "Roboto", sans-serif;
+		font-weight: 500;
+		padding: 0 toRem(15) toRem(13);
+		border-bottom: toRem(2) solid;
+		color: #1f2933;
+		&::placeholder {
+			text-transform: capitalize;
+			opacity: 0.5;
+		}
+		&:focus {
+			outline: none;
+		}
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $bgColor;
+			}
+		}
+	}
+	// .follow__button
+	&__button {
+		display: inline-flex;
+		align-items: center;
+		// gap: toRem(6);
+		padding: 0 toRem(16) toRem(10);
+		border-bottom: toRem(2) solid;
+		cursor: pointer;
+		text-align: center;
+		text-transform: uppercase;
+		color: #1f2933;
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $bgColor;
+			}
+		}
+	}
+}
+// ======================================
+.collection {
+	position: relative;
+	color: #fff;
+	background:
+		url("../img/collection/bg.webp") center / cover,
+		#010204;
+	overflow: hidden;
+	// .collection__container
+	&__container {
+		@include adaptiveValue("padding-top", 110, 30, 0, $containerWidth, 667.98);
+	}
+	// .collection__row
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("column-gap", 225, 20, 0, $containerWidth, 667.98);
+		@media (max-width: toEm(667)) {
+			flex-direction: column-reverse;
+			gap: toRem(30);
+		}
+	}
+	// .collection__image
+	&__image {
+		@include adaptiveValue("width", 637, 300, 0, $containerWidth, 667.98);
+		// height: 100%;
+		aspect-ratio: 637 / 664;
+		object-fit: contain;
+		@media (max-width: toEm(667)) {
+			width: 100%;
+		}
+	}
+	// .collection__content
+	&__content {
+		font-family: "Roboto", sans-serif;
+		@include adaptiveValue("padding-top", 123, 20, 0, $containerWidth, 667.98);
+		padding-bottom: toRem(20);
+		max-width: toRem(504);
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 55, 20, 0, $containerWidth, 667.98);
+	}
+	// .collection__title
+	&__title {
+		img {
+			@include adaptiveValue("width", 191, 120);
+			aspect-ratio: 191/81;
+			object-fit: contain;
+		}
+	}
+	// .collection__text
+	&__text {
+		@include adaptiveValue("font-size", 26, 16);
+		line-height: 1.54; /* 40/26 */
+		text-transform: capitalize;
+	}
+	// .collection__button
+	&__button {
+		display: inline-block;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		align-self: start;
+		padding: toRem(19) toRem(26);
+		@include adaptiveValue("font-size", 29, 20, 0, $containerWidth, 667.98);
+		text-transform: capitalize;
+		background-color: #fff;
+		color: $mainColor;
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $bgColor;
+				color: #fff;
+			}
+		}
+		@media (max-width: toEm(667)) {
+			padding: toRem(15) toRem(20);
+		}
+		@media (max-width: toEm(500)) {
+			width: 100%;
+		}
+	}
+	// .collection__bg
+	&__bg {
+		position: absolute;
+		z-index: 1;
+		top: toRem(51);
+		right: toRem(-56);
+		@include adaptiveValue("width", 732, 300);
+		aspect-ratio: 732 / 309;
+		object-fit: contain;
+		@media (max-width: toEm(667)) {
+			right: toRem(-30);
+		}
+	}
+}

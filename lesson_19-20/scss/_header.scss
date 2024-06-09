@@ -1,0 +1,239 @@
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	background-color: #f4f4f5;
+	// .header__container
+	&__container {
+	}
+	// .header__top
+	&__top {
+	}
+	// .header__menu
+	&__menu {
+		@media (min-width: $mobile) {
+			min-height: toRem(90);
+			padding-top: toRem(30);
+			padding-bottom: toRem(30);
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+.top-header {
+	position: relative;
+	display: flex;
+	column-gap: toRem(20);
+	// flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	@include adaptiveValue("min-height", 90, 50);
+	padding-top: toRem(15);
+	padding-bottom: toRem(15);
+	@media (min-width: $mobile) {
+		border-bottom: 1px solid #e3e3e3;
+		padding-top: toRem(30);
+		padding-bottom: toRem(25);
+	}
+	// .top-header__search
+	&__search {
+		position: relative;
+		z-index: 5;
+		img {
+			width: toRem(20);
+			aspect-ratio: 20/19;
+			object-fit: contain;
+		}
+		@media (max-width: toEm(474.98)) {
+			order: 2;
+		}
+		transition: transform 0.3s;
+		will-change: transform;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.15);
+			}
+		}
+	}
+	// .top-header__logo
+	&__logo {
+		position: relative;
+		z-index: 5;
+		img {
+			aspect-ratio: 180 / 34;
+			@include adaptiveValue("width", 180, 130, 0, $containerWidth, 320);
+			object-fit: contain;
+		}
+		@media (min-width: toEm(474.98)) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		@media (max-width: toEm(474.98)) {
+			order: 1;
+		}
+	}
+	// .top-header__actions
+	&__actions {
+		position: relative;
+		z-index: 5;
+		@media (max-width: toEm(474.98)) {
+			order: 3;
+		}
+	}
+	// .top-header__icon
+	&__icon {
+	}
+}
+.actions {
+	display: flex;
+	column-gap: toRem(22);
+	@media (max-width: toEm(474.98)) {
+		column-gap: toRem(15);
+	}
+	// .actions__item
+	&__item {
+		font-family: "Roboto";
+		font-size: toRem(18);
+		display: flex;
+		align-items: center;
+		gap: toRem(11);
+		transition: color 0.3s;
+		img {
+			width: toRem(20);
+			aspect-ratio: 20/19;
+			object-fit: contain;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $bgColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			span {
+				display: none;
+			}
+		}
+	}
+}
+.menu {
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		// column-gap: toRem(57);
+		@include adaptiveValue("column-gap", 57, 20, 0, $containerWidth, 767.98);
+		row-gap: toRem(10);
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .menu__item
+	&__item {
+		line-height: 1.5; /* 24/16 */
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $bgColor;
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+	}
+}
+.icon--menu {
+	display: none;
+}
+@media (max-width: $mobile) {
+	.icon--menu {
+		display: block;
+		position: relative;
+		height: toRem(20);
+		width: toRem(30);
+		flex-shrink: 0;
+		z-index: 5;
+	}
+	.icon--menu::before,
+	.icon--menu::after,
+	.icon--menu span {
+		content: "";
+		height: toRem(3);
+		width: 100%;
+		position: absolute;
+		left: 0;
+		transition: all 0.3s;
+		background-color: #000;
+		border-radius: 5px;
+	}
+	.icon--menu::before {
+		top: 0;
+	}
+	.icon--menu::after {
+		bottom: 0;
+	}
+	.icon--menu span {
+		top: 50%;
+		transform: translate(0px, -50%);
+	}
+	.menu-open .icon--menu::before {
+		transform: rotate(-45deg);
+		top: 50%;
+		margin-top: toRem(-1.5);
+	}
+	.menu-open .icon--menu::after {
+		transform: rotate(45deg);
+		bottom: 50%;
+		margin-bottom: toRem(-1.5);
+	}
+	.menu-open .icon--menu span {
+		transform: scale(0);
+	}
+	.menu {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		transition: all 0.3s;
+		width: 100%;
+		height: 100%;
+		background-color: $mainColor;
+		color: #fff;
+		z-index: 4;
+		overflow: auto;
+		@include adaptiveValue("padding-top", 120, 80);
+		// padding-top: toRem(90);
+		// padding-bottom: 30px;
+	}
+	.menu::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		right: -100%;
+		transition: all 0.3s;
+		width: 100%;
+		@include adaptiveValue("height", 90, 50);
+		background-color: #f4f4f5;
+		z-index: 5;
+	}
+	.menu-open .menu {
+		right: 0;
+	}
+	.menu-open .menu::before {
+		right: 0;
+	}
+	.menu__list {
+		flex-direction: column;
+		align-items: center;
+		row-gap: toRem(30);
+		text-align: center;
+	}
+	.menu__link {
+		font-size: toRem(28);
+	}
+}
