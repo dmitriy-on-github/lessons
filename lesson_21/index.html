@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>21. Основи JavaScrypt. Частина 1</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="page">
+				<div class="page__container">
+					<h2 class="page__title">Основи JavaScrypt. Частина 1</h2>
+					<div class="page__rows">
+						<section class="page__block">
+							<div class="page__question">
+								<p>Питання 1. Яка назва змінної вірна?</p>
+							</div>
+							<ol class="page__options">
+								<li class="page__option">1. let user-name</li>
+								<li class="page__option">2. let UserName</li>
+								<li class="page__option">3. let userName</li>
+							</ol>
+							<details class="page__answer answer">
+								<summary class="answer__label">
+									Відповідь:
+								</summary>
+								<p class="answer__text">
+									<span>3. let userName</span>
+								</p>
+								<p class="answer__text">
+									Для запису змінних використовується стиль lowerCamelCase.
+								</p>
+							</details>
+
+						</section>
+						<section class="page__block">
+							<div class="page__question">
+								<p>Питання 2. Чи буде помилка при виконанні наступної програми?</p>
+								<p>const userName = 20</p>
+								<p>userName = "Іштван"</p>
+							</div>
+							<details class="page__answer answer">
+								<summary class="answer__label">
+									Відповідь:
+								</summary>
+								<p class="answer__text">
+									<span>Так. Неможна змінювати значення константи після її
+										оголошення.</span>
+								</p>
+							</details>
+
+						</section>
+						<section class="page__block">
+							<div class="page__question">
+								<p>Що потрапить в консоль?</p>
+								<p>let numOne = 20</p>
+								<p>let numTwo = "20"</p>
+								<p>let numSumm = numOne + numTwo</p>
+								<p>console.log(numSumm)</p>
+							</div>
+							<details class="page__answer answer">
+								<summary class="answer__label">
+									Відповідь:
+								</summary>
+								<p class="answer__text">
+									<span>"2020"</span>
+								</p>
+							</details>
+
+						</section>
+					</div>
+				</div>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
