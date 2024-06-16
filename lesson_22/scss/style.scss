@@ -1,0 +1,130 @@
+@use "sass:math";
+// Підключення шрифтів з Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular&display=swap");
+// Локальне підключення шрифтів
+//@import "_fonts.scss";
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+
+// @import "_header.scss";
+// @import "_footer.scss";
+
+// =========== Налаштування адаптивної сітки =========================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1290;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+// ===============================
+$pc: $containerWidth;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+$mainColor: #ce87f4;
+$darkColor: #8025b1;
+$bgColor: #333;
+
+body {
+	background-color: $bgColor;
+	color: $mainColor;
+	font-family: "Roboto", sans-serif;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	& > main {
+		flex-grow: 1;
+	}
+}
+// ===============================
+[class*="__container"] {
+	max-width: toRem(1320);
+	padding: 0 toRem(15);
+	margin: 0 auto;
+}
+// ===============================
+.page {
+	padding: toRem(30) toRem(15);
+	@media (max-width: $mobileSmall) {
+		padding: toRem(20) 0;
+	}
+	// .page__container
+	&__container {
+	}
+	// .page__title
+	&__title {
+		text-align: center;
+		@include adaptiveValue("font-size", 40, 30);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	// .page__rows
+	&__rows > * {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .page__block
+	&__block {
+		background: linear-gradient(
+			90deg,
+			rgba(206, 135, 244, 1) 0%,
+			rgba(240, 240, 240, 1) 50%,
+			rgba(206, 135, 244, 1) 100%
+		);
+		color: $bgColor;
+		border-radius: toRem(20);
+		padding: toRem(20);
+		font-size: toRem(20);
+		display: grid;
+		gap: toRem(20);
+	}
+	// .page__question
+	&__question > p {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .page__options
+	&__options {
+	}
+	// .page__option
+	&__option {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .page__answer
+	&__answer {
+	}
+}
+.answer {
+	// .answer__label
+	&__label {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .answer__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		span {
+			color: $darkColor;
+		}
+	}
+}
