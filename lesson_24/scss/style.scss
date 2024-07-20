@@ -1,0 +1,230 @@
+@use "sass:math";
+// Підключення шрифтів з Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular&display=swap");
+// Локальне підключення шрифтів
+//@import "_fonts.scss";
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+
+// @import "_header.scss";
+// @import "_footer.scss";
+
+// =========== Налаштування адаптивної сітки =========================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1290;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+// ===============================
+$pc: $containerWidth;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+$mainColor: #ce87f4;
+$darkColor: #8025b1;
+$bgColor: #333;
+
+body {
+	background-color: $bgColor;
+	color: $mainColor;
+	font-family: "Roboto", sans-serif;
+	transition: all 2s;
+	&:not(.loaded) {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	& > main {
+		flex-grow: 1;
+	}
+}
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+}
+.header,
+.footer {
+	height: toRem(50);
+	background-color: $mainColor;
+	color: #f0f0f0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+// ===============================
+[class*="__container"] {
+	max-width: toRem(1320);
+	padding: 0 toRem(15);
+	margin: 0 auto;
+}
+// ===============================
+.page {
+	padding: toRem(30) toRem(15);
+	@media (max-width: $mobileSmall) {
+		padding: toRem(20) 0;
+	}
+	// .page__container
+	&__container {
+	}
+	// .page__title
+	&__title {
+		text-align: center;
+		font-size: toRem(40);
+		@media (max-width: $mobile) {
+			font-size: toRem(30);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	// .page__rows
+	&__rows > * {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .page__block
+	&__block {
+		background: linear-gradient(
+			90deg,
+			rgba(206, 135, 244, 1) 0%,
+			rgba(240, 240, 240, 1) 50%,
+			rgba(206, 135, 244, 1) 100%
+		);
+		color: $bgColor;
+		border-radius: toRem(20);
+		padding: toRem(20);
+		font-size: toRem(20);
+		display: grid;
+		gap: toRem(20);
+	}
+	// .page__question
+	&__question > p {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .page__options
+	&__options {
+	}
+	// .page__option
+	&__option {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .page__answer
+	&__answer {
+	}
+	// .page__example
+	&__example {
+		max-height: toRem(200);
+		overflow: auto;
+	}
+	&__example > * {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .page__text
+	&__text {
+	}
+	// .page__button
+	&__button {
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $bgColor;
+			}
+		}
+	}
+	// .page__link
+	&__link {
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #f0f0f0;
+			}
+		}
+	}
+	// .page__list
+	&__list {
+		display: flex;
+		gap: toRem(20);
+	}
+}
+.button {
+	background-color: $darkColor;
+	padding: toRem(10) toRem(30);
+	color: #f0f0f0;
+	border-radius: toRem(8);
+	text-transform: uppercase;
+}
+.item {
+	cursor: pointer;
+	display: inline-block;
+	border-radius: toRem(8);
+	padding: toRem(10);
+	&.active {
+		background-color: #f0f0f0;
+	}
+}
+.block {
+	display: inline-block;
+	// .block__item
+	&__item {
+		min-width: toRem(50);
+		text-align: center;
+		opacity: 0;
+		transform: translate(-100%, 0);
+		transition: all 1s;
+		&.animate {
+			opacity: 1;
+			transform: translate(0px, 0px);
+		}
+	}
+}
+.answer {
+	// .answer__label
+	&__label {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .answer__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		span {
+			color: $darkColor;
+		}
+	}
+	// answer__image
+	&__image {
+		img {
+			max-width: 100%;
+			border-radius: toRem(8);
+		}
+	}
+}
